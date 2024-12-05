@@ -1,0 +1,21 @@
+.productListContainer{
+    overflow: hidden;
+    >h1{
+        text-align: center;
+        padding-top: 10px;
+    }
+    >button{
+        background-color: #008000fc;
+        padding: 8px;
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: 1px solid black;
+        box-sizing: border-box;
+        box-shadow: 2px 3px 15px 1px gray;
+        margin: 18px 8px;
+        letter-spacing: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

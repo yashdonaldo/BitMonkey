@@ -1,0 +1,36 @@
+service: bitMonkey-user
+
+provider: 
+  name: aws
+  runtime: nodejs20.x
+  region: ap-south-1
+  stage: dev
+
+functions: 
+  app:
+    handler: index.userService
+    events: 
+      - httpApi: 
+          path: /api2/v1/user/{proxy+}  
+          method: ANY
+    environment:
+      PORT: 8000
+      USER_PORT: 8001
+      DB_URI: ${env:DB_URI}
+      BUCKET_NAME: bitmonkey-s3
+      BUCKET_REGION: ap-south-1
+      ACCESS_KEY: ${env:ACCESS_KEY}
+      SECRET_KEY: ${env:SECRET_KEY}
+      JWT_SECRET_KEY: ${env:JWT_SECRET_KEY}
+      JWT_EXPIRE: 3d
+      COKKIE_EXPIRE: 3
+      SMPT_SERVICE: smtp.gmail.com
+      SMPT_PORT: 587
+      SMPT_MAIL: ${env:SMPT_MAIL}
+      SMPT_PASS: ${env:SMPT_PASS}
+      FRONTEND_URL: http://localhost:5173
+
+useDotenv: true
+
+plugins:
+  - serverless-offline

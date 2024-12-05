@@ -1,0 +1,25 @@
+.dropmenu {
+    width: 100%;
+    padding: 9px;
+    ul {
+        margin-bottom: 3px;
+        cursor: pointer;
+        >li {
+            padding: 5px;
+            border: 1px solid;
+            margin-bottom: 15px;
+            list-style: none;
+            font-size: 16px;
+            color: white;
+            border: 1px solid gold;
+            font-weight: 500;
+            font-family: sans-serif;
+            font-smooth: 2;
+            text-shadow: 3px 3px 11px gold;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 5px;
+        }
+    }
+
+}

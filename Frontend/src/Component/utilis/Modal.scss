@@ -1,0 +1,95 @@
+.modal {
+    text-align: center;
+    background-color: #e1dcdd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 54%;
+    position: absolute;
+    top: 11%;
+    left: 33%;
+    filter: drop-shadow(2px 4px 6px black);
+
+
+    >.tittle {
+        border-bottom: 1px solid gray;
+        width: 100%;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+
+        >h2 {
+            font-size: x-large;
+            color: #000000cf;
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-family: cursive;
+        }
+
+        >button svg {
+            font-size: 33px;
+            color: #000000cf;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+
+            &:hover{
+                background-color: #383636;
+            }
+        }
+    }
+
+    >.input {
+        border-bottom: 1px solid gray;
+        width: 100%;
+        padding: 15px;
+
+        >form input {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            margin: 5px;
+        }
+      
+        >form .submit {
+            border-bottom: 1px solid gray;
+            width: 100%;
+            text-align: end;
+            padding: 19px;
+    
+            >.close {
+                padding: 8px 21px;
+                font-size: 18px;
+                background-color: #80808096;
+                border: 1px solid gray;
+                border-radius: 7px;
+                margin-right: 10px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+    
+                &:hover{
+                    background-color: #383636;
+                }
+            }
+    
+            >.submit-btn {
+                padding: 8px 21px;
+                font-size: 18px;
+                background-color: green;
+                color: #fff;
+                font-weight: 700;
+                font-family: cursive;
+                border: 1px solid gray;
+                border-radius: 7px;
+                margin-right: 10px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+    
+                &:hover{
+                    background-color: rgb(3, 90, 3);
+                }
+            }
+        }
+    }
+
+}
