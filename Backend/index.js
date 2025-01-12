@@ -16,6 +16,7 @@ process.on("uncaughtException", err=>{
 dotenv.config({path: ".env"})
 
 connectToDatabase()
+// await connectRedis()
 
 const Server = app.listen(process.env.PORT, ()=>{
     console.log(`Server Started at http://localhost:${process.env.PORT}`)

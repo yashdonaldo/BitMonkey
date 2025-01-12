@@ -1,5 +1,5 @@
 import express from 'express';
-import { Newslist } from '../Controller/NewsController.js';
+// import { Newslist } from '../Controller/NewsController.js';
 import {  uploadVideo, getVideo, deleteVideo } from '../Controller/awsController.js';
 const router = express.Router();
 

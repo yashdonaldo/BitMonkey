@@ -17,6 +17,23 @@ export default (err, req, res, next) => {
         err = new ErrorHandle(message, 400)
     }
 
+    // Redis Error
+    if(err.name === "RedisError"){
+        err = new ErrorHandle(err.message, 500)
+    }
+
+    // Wrong JWT error
+    if(err.name === "JsonWebTokenError"){
+        const message = `Json Web Token is invalid, Try again`
+        err = new ErrorHandle(message, 400)
+    }
+
+    // JWT expire error
+    if(err.name === "TokenExpiredError"){
+        const message = `Json Web Token is Expired, Try again`
+        err = new ErrorHandle(message, 400)
+    }
+
     res.status(err.statusCode).json({
         success: false,
         message: err.message

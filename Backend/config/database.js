@@ -13,7 +13,7 @@ export const connectToDatabase = async () => {
         // Connection options
         console.log('Creating new database connection...');
         const options = {
-            // serverSelectionTimeoutMS: 10000, // Timeout after 5s instead of 30s
+            serverSelectionTimeoutMS: 10000, // Timeout after 5s instead of 30s
             maxPoolSize: 10, // Maintain up to 10 socket connections
         };
 
@@ -59,3 +59,5 @@ export const disconnectFromDatabase = async () => {
         }
     }
 };
+
+
